@@ -2,12 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Gestao</title>
+
+  <title>LibreClass - Gestão</title>
+
   <base href="/">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script type="text/javascript">
+    function loadJSON(n){var t=new XMLHttpRequest;t.overrideMimeType("application/json");t.open("GET","assets/settings.json",true);t.onreadystatechange=function(){if(t.readyState==4&&t.status=="200"){n(t.responseText)}};t.send(null)}loadJSON(function(n){var t=JSON.parse(n);sessionStorage.setItem("ENV",JSON.stringify(t))});
+  </script>
 </head>
 <body>
   <app-root></app-root>
+
 </body>
 </html>
